@@ -162,3 +162,83 @@ console.log(name);
 console.log(it2);
 console.log(name1);
 
+//function inside function
+
+function func() {
+    console.log("im fn 1");
+    function func2() {
+         console.log("im fn 2");
+    }
+    func2();
+}
+func();
+
+//lexical function
+
+
+var a = 9;
+function func3() {
+    var a = 1;
+    console.log("This is fn " + a);
+    function func4() {
+        var a = 2;
+      console.log("this is fn" +a);
+    }
+    func4();
+}
+func3();
+
+
+//Debugger
+
+function fun() {
+    //debugger;
+    for (let i = 1; i <= 5; i++) {
+        console.log(i);
+        
+    }
+}
+fun();
+
+//sets
+
+const ary = [10, 202, 20, 45,10]
+console.log(ary);
+
+const s = new Set([10, 202, 20, 45, 10]);
+s.add(60)
+s.add("hello")
+console.log(s); //no-duplication
+
+//check length
+length = 0;
+for (let el of s) {
+    length++;
+}
+console.log(length);
+
+//map
+
+var map1 = new Map([
+    [1, "one"],
+    ["fname", "raju"],
+    ["whole no.", [0,1,2,3,4]]
+])
+
+
+console.log(map1);
+//get
+console.log(map1.get(1));
+console.log(map1.get("fname"));
+
+
+//set
+var map2 = new Map();
+map2.set("fname", "rocky");
+console.log(map2);
+
+//find key
+var k = map1.keys();
+for (var key of k) {
+    console.log(key);
+}
