@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 400px;
+            height: 400px;
+            background: blue;
+            position: relative;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+         #inside{
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+                border: 3px solid black;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="inside"></div>
+    </div>
+    <p><button onclick="myMove()">Click</button></p>
+    
+    <script>
+        function myMove(){
+            let pos=0;
+            const elem=document.getElementById("inside");
+            const id=setInterval(frame,10)
+            function frame(){
+                // pos++;
+                // elem.style.top=pos+'px';
+                // elem.style.left=pos++ +'px';
+                if(pos==350){
+                    clearInterval(id);
+                }
+                pos++;
+                elem.style.top=pos+'px';
+                elem.style.left=pos++ +'px';
+
+
+            }
+
+            
+        }
+
+    </script>
+</body>
+</html>

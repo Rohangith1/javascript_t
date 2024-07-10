@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 10px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv" onmouseover="onMouseHover(this)" onmouseout="onMouseOut(this)"></div><br>
+    <button  onclick="myfun()">
+        Change color
+    </button>
+    <button onmousedown="changingColor()" onmouseup="stop()">
+       press to Change color
+    </button>
+    <button id="btn">new</button>
+    <script>
+        function myfun(){
+          var div=document.getElementById("myDiv")
+          div.style.backgroundColor="red"
+        }
+        function onMouseHover(div){
+            //var div=document.getElementById("myDiv")
+            div.style.backgroundColor="blue"
+        }
+        function onMouseOut(div){
+            //var div=document.getElementById("myDiv")
+            div.style.backgroundColor="purple"
+        }
+        function changingColor(){
+            var div=document.getElementById("myDiv")
+          div.style.backgroundColor="red"
+        }
+        function stop(){
+            var div=document.getElementById("myDiv")
+          div.style.backgroundColor="orange"
+        }
+        //event lister
+        document.getElementById("btn").addEventListener('click',fun)
+        function fun(){
+            document.getElementById("myDiv").style.backgroundColor="black"
+        }
+    </script>
+</body>
+</html>

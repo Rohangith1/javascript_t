@@ -28,7 +28,7 @@ console.log(fun1());
 
 //undefined
 function fun2() {
-    let fName="'jhon"
+    let fName="jhon"
   return this.fName;
 }
 console.log(fun2());
@@ -43,7 +43,7 @@ console.log(new fun3());
 //
 //new-implement
 function fun4() {
-    let fName="'jhon"
+    let fName = "jhon";
    this.fName=fName;
 }
 console.log(new fun4());
