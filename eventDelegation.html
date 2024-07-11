@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            padding: 20px;
+            background-color: blue;
+        }
+        div{
+            padding: 20px;
+            background-color: red;
+            width: max-content;
+        }
+        span{
+            padding: 20px;
+            background-color: black;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <button>click me</button>
+        </span>
+    </div>
+
+
+    <script>
+const div= document.getElementsByTagName('div')[0]
+div.addEventListener('click',(event)=>{
+    if(event.target.tagName=="BUTTON"){
+    console.log("button was clicked")
+    }
+    else if(event.target.tagName=="SPAN"){
+    console.log("span was clicked")
+    }
+    else{
+        console.log("div was clicked")
+    }
+})
+    </script>
+    
+</body>
+</html>

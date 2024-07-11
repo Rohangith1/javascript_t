@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="funSub()">
+        email: <input type="email" name="" id="input" onfocus="onFun()" onblur="ofFun()" onselect="selectFun()" required>
+        <input type="submit">
+    </form>
+    <script>
+        let input=document.getElementById("input")
+        function onFun(){
+            input.style.backgroundColor="red"
+        }
+       
+        function ofFun(){
+            input.style.backgroundColor="yellow"
+        }
+        function funSub(){
+            alert(`${input.value} submitted`)
+        }
+        function selectFun(){
+            alert("You select something")
+        }
+    </script>
+</body>
+</html>

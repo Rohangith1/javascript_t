@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyLogger</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column ;
+            align-items: center;
+            margin-top: 50px;
+        }
+        #log ,#state{
+            width: 500px;
+            height: 50px;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            background-color: orange;
+            border-radius: 5px;
+        }
+
+        .btn-container{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        button{
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-right: 20px;
+            margin-top: 2opx;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="border: 2px solid black; padding: 2px ;border-radius: 10px;">KeyLogger</h1>
+        <p>Dont forgrt to follw Phuke</p>
+        <div class="btn-container">
+            <button id="start-btn">
+                start logging key Presses
+            </button >
+            <button id="stop-btn">
+                stop logging key presses
+            </button>
+        </div>
+        <div class="btn-container" >
+            <button id="log"></button>
+            <button id="state"></button>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
